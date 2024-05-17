@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nordic Shop</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+
+    <style>
+        .work-sans {
+            font-family: 'Work Sans', sans-serif;
+        }
+                
+        #menu-toggle:checked + #menu {
+            display: block;
+        }
+        
+        .hover\:grow {
+            transition: all 0.3s;
+            transform: scale(1);
+        }
+        
+        .hover\:grow:hover {
+            transform: scale(1.02);
+        }
+        
+        .carousel-open:checked + .carousel-item {
+            position: static;
+            opacity: 100;
+        }
+        
+        .carousel-item {
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+        
+        #carousel-1:checked ~ .control-1,
+        #carousel-2:checked ~ .control-2,
+        #carousel-3:checked ~ .control-3 {
+            display: block;
+        }
+        
+        .carousel-indicators {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+            color: #000;
+        }
+    </style>
+
+</head>
+
+@RenderBody()
+
+<body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+<footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+  <div class="container flex px-10 py-8">
+    <div class="w-full mx-auto flex flex-wrap">
+      <div class="flex w-full">
+        <div class="px-3 md:px-0">
+        <p class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-1" >Hakkımızda</>
+          <p class="py-4">
+            Nordics, sade, şık ve işlevsel ev dekorasyon ürünleri sunan bir online mağazadır. Minimalist ve modern tasarım anlayışından esinlenen ismi, kuzeyin estetiğini yansıtır. Müşteri memnuniyetini ön planda tutarak, kaliteli ürünler ve hızlı teslimat sunmayı hedefliyoruz. Evlerinize özel bir dokunuş katmak için Nordics'i tercih edin.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
